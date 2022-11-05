@@ -10,6 +10,7 @@
     <ClCompile Include="gmain.cpp" />
     <ClCompile Include="graph.h" />
     <ClCompile Include="graph.cpp" />
+    <ClCompile Include="mouseGrab.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -20,5 +21,8 @@
     <None Include="cpp.hint">
       <Filter>リソース ファイル</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mouseGrab.h" />
   </ItemGroup>
 </Project>

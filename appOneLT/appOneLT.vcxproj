@@ -152,12 +152,16 @@
     <ClCompile Include="gmain.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="graph.h" />
+    <ClCompile Include="mouseGrab.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mouseGrab.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
