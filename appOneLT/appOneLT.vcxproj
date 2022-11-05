@@ -150,6 +150,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gmain.cpp" />
+    <ClCompile Include="graph.cpp" />
+    <ClCompile Include="graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

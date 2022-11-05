@@ -8,6 +8,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gmain.cpp" />
+    <ClCompile Include="graph.h" />
+    <ClCompile Include="graph.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
