@@ -8,8 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gmain.cpp" />
-    <ClCompile Include="graph.h" />
-    <ClCompile Include="graph.cpp" />
+    <ClCompile Include="moveWithMouse.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -20,5 +19,8 @@
     <None Include="cpp.hint">
       <Filter>リソース ファイル</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="moveWithMouse.h" />
   </ItemGroup>
 </Project>
