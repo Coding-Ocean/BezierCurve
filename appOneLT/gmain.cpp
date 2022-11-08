@@ -17,6 +17,7 @@ void gmain()
     VECTOR p1(950, 200);
     VECTOR p2(1300, 800);
     VECTOR p3(1650, 200);
+    //Prepare for Mouse dragging
     addPointToMoveWithMouse(&p0);
     addPointToMoveWithMouse(&p1);
     addPointToMoveWithMouse(&p2);
