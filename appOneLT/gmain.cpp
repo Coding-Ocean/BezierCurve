@@ -2,8 +2,8 @@
 //#define _DERIVATIVE
 
 #ifdef _BEZIER
-#include"moveWithMouse.h"
 #include"libOne.h"
+#include"moveWithMouse.h"
 void gmain()
 {
     window(1920, 1080, full);
@@ -28,18 +28,22 @@ void gmain()
     addPointToMoveWithMouse(&p3);
     //Main Loop
     while (notQuit) {
-        clear();
         movePointWithMouse();
+        clear();
         //Points
         circle(p0, 14, black, white, 6);
         circle(p1, 14, black, white, 6);
+        circle(p2, 14, black, white, 6);
+        circle(p3, 14, black, white, 6);
     }
 }
 #endif
 
-#ifdef _DERIVARTIVE
-#include"moveWithMouse.h"
+#ifdef _DERIVATIVE
+#include<vector>
 #include"libOne.h"
+#include"moveWithMouse.h"
+#include"bezier.h"
 void gmain()
 {
     window(1920, 1080, full);
@@ -53,10 +57,10 @@ void gmain()
     COLOR yellow(65, 100, 80);
     COLOR rainbow;
     //Points
-    VECTOR p0(600, 800);
-    VECTOR p1(950, 200);
-    VECTOR p2(1300, 800);
-    VECTOR p3(1650, 200);
+    VECTOR p0(600, 500);
+    VECTOR p1(900, 500);
+    VECTOR p2(1200, 500);
+    VECTOR p3(1500, 500);
     //Prepare for Mouse dragging
     addPointToMoveWithMouse(&p0);
     addPointToMoveWithMouse(&p1);
@@ -66,7 +70,18 @@ void gmain()
     while (notQuit) {
         clear();
         movePointWithMouse();
+        //Bezier curve
+        VECTOR sp = p0;
+        VECTOR ep;
+        float dtm = 0.05f;
+        for (float tm = dtm; tm <= 1.00001f; tm += dtm) {
+            ep = bezier(p0, p1, p2, p3, tm);
+            line(sp, ep, yellow, 5);
+            sp = ep;
+        }
         //Points
+        line(p0, p1, white, 2);
+        line(p3, p2, white, 2);
         circle(p0, 14, black, white, 6);
         circle(p1, 14, black, white, 6);
         circle(p2, 14, black, white, 6);
