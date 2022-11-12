@@ -41,10 +41,12 @@ void circle(float x, float y, float diameter);
 void point(const class VECTOR& p,
 	const struct COLOR& c, float strokeW);
 void line(const class VECTOR& p1, const class VECTOR& p2,
-	const struct COLOR& strokeColor, float strkWeight);
+	const struct COLOR& strokeColor, float strokeW);
+void arrow(const class VECTOR& s, const class VECTOR& e,
+	const struct COLOR& strokeColor, float strokeW);
 void circle(const class VECTOR& p, float diameter,
 	const struct COLOR& fillColor, const struct COLOR& strokeColor, float strokeW);
-void rect(const class VECTOR& p, float w, float h, float angle,const enum RECT_MODE mode,const struct COLOR& fillColor, const struct COLOR& strokeColor, float strokeW);
+void rect(const class VECTOR& p, float w, float h, float angle,const RECT_MODE mode,const struct COLOR& fillColor, const struct COLOR& strokeColor, float strokeW);
 struct SHAPE_VERTEX { float x, y; };
 int createShape(struct SHAPE_VERTEX* vertices, int numVertices);
 int createShape(struct SHAPE_VERTEX* vertices, int numVertices, long* indices, int numIndices);
@@ -55,6 +57,7 @@ int loadImageFromRes(const char* resname);
 int cutImage(int idx, int left, int top, int w, int h);
 void divideImage(int img, int cols, int rows, int w, int h, int* imgs);
 void image(int idx, float x, float y, float angle = 0, float size = 1);
+void image(int idx, const class VECTOR& p, float angle = 0, float size = 1, RECT_MODE mode = CORNER);
 void triangle3D(const class VECTOR& p0, const class VECTOR& p1, const class VECTOR& p2,
             const COLOR& c0=COLOR(), const COLOR& c1=COLOR(), const COLOR& c2=COLOR());
 void font(const char* fontname);

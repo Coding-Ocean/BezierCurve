@@ -9,6 +9,7 @@
   <ItemGroup>
     <ClCompile Include="gmain.cpp" />
     <ClCompile Include="moveWithMouse.cpp" />
+    <ClCompile Include="bezier.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -22,5 +23,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="moveWithMouse.h" />
+    <ClInclude Include="bezier.h" />
   </ItemGroup>
 </Project>
