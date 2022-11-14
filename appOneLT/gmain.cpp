@@ -1,5 +1,5 @@
-#define _BEZIER
-//#define _DERIVATIVE
+//#define _BEZIER
+#define _DERIVATIVE
 #ifdef _BEZIER
 #include"libOne.h"
 #include"moveWithMouse.h"
