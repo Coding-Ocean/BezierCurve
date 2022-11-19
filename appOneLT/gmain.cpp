@@ -1,5 +1,5 @@
-//#define _BEZIER
-#define _DERIVATIVE
+#define _BEZIER
+//#define _DERIVATIVE
 #ifdef _BEZIER
 #include"libOne.h"
 #include"moveWithMouse.h"
@@ -28,7 +28,7 @@ void gmain()
     addPointToMoveWithMouse(&p1);
     addPointToMoveWithMouse(&p2);
     addPointToMoveWithMouse(&p3);
-    //
+    //For animation
     float t = 0;
     float dt = 0.005f;
     const float DT = dt;
